@@ -116,3 +116,16 @@ See the [LICENSE](./LICENSE) file for details.
 ### v3
 
 - Mobile app
+
+## Commits:
+
+feat: add task system
+feat: add rewards system
+fix: task counter bug
+refactor: restructure components
+chore: setup project
+docs: update README
+
+style: касаются только оформления кода и его стиля
+test: касающиеся сборки проекта или его инструментов
+build: касающиеся сборки проекта или его инструментов
