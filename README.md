@@ -1,73 +1,118 @@
-# React + TypeScript + Vite
+# HomeHeroes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Family productivity application for managing household tasks, rewards, and motivation system for children.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Role-based system (Parent / Child)
+- Task management with approval flow
+- Points & rewards system
+- Family "store" for redeeming rewards
+- Personal dashboards
+- Custom UI themes (per user)
+- Gamification for motivation
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**:
+  - React + TypeScript
+  - Vite
+  - React Router
+  - Zustand
+  - React Query
+  - Axios
+  - React Hook Form + Zod
+  - Tailwind CSS
 
-## Expanding the ESLint configuration
+- **Backend**: Node.js, Express, MongoDB, GraphQL // todo change stack
+- **Other tools**: ESLint, Prettier, Husky
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<!-- src/
+app/ # app setup (router, providers)
+pages/ # route pages
+features/ # business logic modules
+entities/ # core domain models
+shared/ # reusable UI + utils -->
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+`````bash
+npm install
+npm run dev
+Code Quality
+npm run lint
+npm run format
+```Future Improvements
+Authentication (Supabase / custom backend)
+Mobile-first UI
+Notifications system
+Family statistics dashboard
+Calendar / planner integration
+Status
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+In active development (MVP stage)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## todo
+
+# ```bash id="g1"
+# git add README.md
+# git commit -m "docs: add README"
+# git push
+# ````
+`````
+
+## Components
+
+-
+-
+
+## Endpoints
+
+The API has the following endpoints:
+//to do
+
+<!-- POST /tasks: Create a new task
+GET /tasks: Fetch all tasks
+PUT /tasks/{id}: Update task details
+DELETE /tasks/{id}: Delete a task -->
+
+## Documentation
+
+For more detailed documentation, refer to the ............
+
+## License
+
+This project is licensed under the MIT License.
+See the [LICENSE](./LICENSE) file for details.
+
+## MVP
+
+- Authentication
+- Parent dashboard
+- Child dashboard
+- Tasks management
+- Rewards store
+- Points system
+
+## Roadmap
+
+### v1
+
+- Authentication
+- Tasks
+- Rewards
+
+### v2
+
+- Notifications
+- Planner
+- Statistics
+
+### v3
+
+- Mobile app
