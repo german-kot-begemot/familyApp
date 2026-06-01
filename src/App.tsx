@@ -1,29 +1,13 @@
 import './App.css';
+import { RouterProvider } from 'react-router';
+import { router } from './routes/router';
 
-export default function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      Family App
-      <div className="text-red-500">test</div>
+    <div data-testid="app" className="App">
+      <RouterProvider router={router} />
     </div>
   );
-}
+};
 
-// import React from 'react';
-
-// import './App.css';
-// import { RouterProvider } from 'react-router';
-// import { router } from './routes/router';
-// import { AuthProvider } from './hooks/useAuth';
-
-// const App: React.FC = () => {
-//   return (
-//     <div data-testid="app" className="App">
-//       <AuthProvider>
-//         <RouterProvider router={router} />
-//       </AuthProvider>
-//     </div>
-//   );
-// };
-
-// export default App;
+export default App;
