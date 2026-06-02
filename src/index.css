@@ -1,8 +1,37 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Klukva';
+  src: url('./assets/fonts/Klukva_version_01.otf') format('opentype');
+  font-weight: 400;
+}
+
 :root {
   font-family: Inter, system-ui, sans-serif;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,12 +49,23 @@ html,
 body,
 #root {
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   line-height: 1.5;
-  background-color: #f5f5f5;
-  color: #222;
+  background-color: #fcfbe3;
+  color: #4ca;
+  /* color: #2e2e2e; */
   -webkit-font-smoothing: antialiased;
 }
+
+::placeholder {
+  color: #383333;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
 img,
 picture,
 svg,
@@ -39,10 +79,14 @@ button,
 textarea,
 select {
   font: inherit;
+  font-size: 14px;
 }
 
 button {
   cursor: pointer;
+  background-color: #4ca;
+  color: #fcfbe3;
+  /* margin-top: 20px; */
 }
 
 a {
@@ -52,4 +96,8 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+input:focus::placeholder {
+  opacity: 0;
 }
