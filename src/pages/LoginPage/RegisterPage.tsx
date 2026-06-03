@@ -1,23 +1,26 @@
 import { RegisterForm } from '@/features/auth/RegisterForm';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export const RegisterPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="page-wrapper flex min-h-screen items-center justify-center flex-col">
       <div className="btn-auth-wrapper max-w-sm overflow-hidden flex flex-col p-10">
-        <h1 className=" text-5xl text-center pb-8">Join Home Heroes</h1>
+        <h1 className=" text-5xl text-center pb-8">{t('auth.joinTitle')}</h1>
         <h2 className="text-[#4ca] text-center pb-5 text-[20px]">
-          Create your family account
+          {t('auth.regTitle')}
         </h2>
         <RegisterForm />
 
         <p className="text-[#4ca] pt-5 pb-2 text-start text-[10px]">
-          By signing in, you agree to our Terms of use and Privacy policy
+          {t('auth.terms')}
         </p>
         <p className="pt-5 text-center">
-          Already have an account?{' '}
+          {t('auth.haveAccount')}{' '}
           <Link to="/login" className=" font-bold underline decoration-solid">
-            Sign in
+            {t('auth.signIn')}
           </Link>
         </p>
       </div>

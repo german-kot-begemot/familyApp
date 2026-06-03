@@ -1,9 +1,12 @@
 import { LoginForm } from '@/features/auth/LoginForm';
 import { Button } from '../../components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handlecreateAcc = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -12,19 +15,20 @@ export const LoginPage = () => {
 
   return (
     <main className="page-wrapper flex min-h-screen items-center justify-center flex-col">
+      <div className="absolute top-4 right-4">
+        <LanguageSwitcher />
+      </div>
       <div className="log-wrapper max-w-sm overflow-hidden flex flex-col p-10">
-        <h1 className=" text-5xl text-center pb-8">Wellcome to Home Heroes</h1>
-        <h2 className="text-[#4ca] pb-5 text-[20px]">Log in</h2>
+        <h1 className=" text-5xl text-center pb-8">{t('auth.welcome')}</h1>
+        <h2 className="text-[#4ca] pb-5 text-[20px]">{t('auth.logIn')}</h2>
         <LoginForm />
-        <h2 className="text-[#4ca] pt-5 pb-2 text-start">
-          Don't have an account?
-        </h2>
+        <h2 className="text-[#4ca] pt-5 pb-2 text-start">{t('auth.noPage')}</h2>
         <Button
           type="button"
           onClick={handlecreateAcc}
           className="w-full py-2 font-medium"
         >
-          Create account
+          {t('auth.createAccount')}
         </Button>
       </div>
     </main>

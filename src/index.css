@@ -52,7 +52,7 @@ body,
   font-family: 'Nunito', sans-serif;
   line-height: 1.5;
   background-color: #fcfbe3;
-  color: #4ca;
+  color: #44ccaa;
   /* color: #2e2e2e; */
   -webkit-font-smoothing: antialiased;
 }
@@ -84,7 +84,7 @@ select {
 
 button {
   cursor: pointer;
-  background-color: #4ca;
+  background-color: #44ccaa;
   color: #fcfbe3;
   /* margin-top: 20px; */
 }
