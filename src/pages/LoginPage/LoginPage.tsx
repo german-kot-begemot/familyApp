@@ -20,8 +20,12 @@ export const LoginPage = () => {
         <LanguageSwitcher />
       </div>
       <div className="log-wrapper max-w-sm overflow-hidden flex flex-col p-10">
-        <h1 className=" text-5xl text-center">{t('auth.welcome')}</h1>
-        <h1 className=" text-5xl text-center pb-8">{t('auth.appName')}</h1>
+        <h1 className=" text-center font-goosberry text-2xl">
+          {t('auth.welcome')}
+        </h1>
+        <h1 className=" text-5xl text-center pb-8 font-goosberry">
+          {t('auth.appName')}
+        </h1>
         <LoginForm />
         <h2 className="text-[#4ca] pt-5 pb-2 text-start">{t('auth.noPage')}</h2>
         <Button
