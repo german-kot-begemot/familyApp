@@ -1,6 +1,7 @@
 export const ru = {
   auth: {
-    welcome: 'Добро пожаловать в Home Heroes',
+    welcome: 'Добро пожаловать в',
+    appName: 'Home Heroes',
     logIn: 'Войти',
     noPage: 'Нет аккаунта?',
     createAccount: 'Создать аккаунт',
@@ -12,5 +13,7 @@ export const ru = {
     signIn: 'Войти',
     regTitle: 'Создайте семейный аккаунт',
     joinTitle: 'Присоединяйтесь к Home Heroes',
+    confirmPassword: 'Подтвердите пароль',
+    name: 'Имя',
   },
 };

@@ -1,6 +1,7 @@
 export const en = {
   auth: {
-    welcome: 'Welcome to Home Heroes',
+    welcome: 'Welcome to',
+    appName: 'Home Heroes',
     logIn: 'Log in',
     noPage: "Don't have an account?",
     createAccount: 'Create account',
@@ -11,5 +12,7 @@ export const en = {
     signIn: 'Sign in',
     regTitle: 'Create your family account',
     joinTitle: 'Join Home Heroes',
+    confirmPassword: 'Confirm password',
+    name: 'Name',
   },
 };

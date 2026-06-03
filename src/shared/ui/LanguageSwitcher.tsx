@@ -16,11 +16,14 @@ export const LanguageSwitcher = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="px-3 py-1 border rounded-md text-sm">
+      <DropdownMenuTrigger className="px-3 py-1 border rounded-md text-sm outline-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0">
         {i18n.language.toUpperCase()}
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="p-0">
+      <DropdownMenuContent
+        align="end"
+        className="p-0 outline-none focus:outline-none ring-0 focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
+      >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
