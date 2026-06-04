@@ -16,4 +16,16 @@ export const de = {
     confirmPassword: 'Passwort bestätigen',
     name: 'Name',
   },
+  errorMessages: {
+    nameRequired: 'Name ist erforderlich',
+    nameMin: 'Name muss mindestens 2 Zeichen enthalten',
+    emailRequired: 'E-Mail ist erforderlich',
+    emailInvalid: 'Ungültiges E-Mail-Format',
+    passwordRequired: 'Passwort ist erforderlich',
+    passwordMin: 'Mindestens 8 Zeichen',
+    passwordUppercase: 'Mindestens ein Großbuchstabe',
+    passwordNumber: 'Mindestens eine Zahl',
+    confirmPasswordRequired: 'Passwort bestätigen ist erforderlich',
+    passwordsMatch: 'Passwörter stimmen nicht überein',
+  },
 };

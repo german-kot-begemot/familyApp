@@ -15,4 +15,16 @@ export const en = {
     confirmPassword: 'Confirm password',
     name: 'Name',
   },
+  errorMessages: {
+    nameRequired: 'Name is required',
+    nameMin: 'Name must contain at least 2 characters',
+    emailRequired: 'Email is required',
+    emailInvalid: 'Invalid email format',
+    passwordRequired: 'Password is required',
+    passwordMin: 'At least 8 characters',
+    passwordUppercase: 'At least one uppercase letter',
+    passwordNumber: 'At least one number',
+    confirmPasswordRequired: 'Confirm Password is required',
+    passwordsMatch: 'Passwords do not match',
+  },
 };

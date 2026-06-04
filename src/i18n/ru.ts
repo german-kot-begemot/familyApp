@@ -16,4 +16,16 @@ export const ru = {
     confirmPassword: 'Подтвердите пароль',
     name: 'Имя',
   },
+  errorMessages: {
+    nameRequired: 'Введите имя',
+    nameMin: 'Имя должно содержать минимум 2 символа',
+    emailRequired: 'Введите email',
+    emailInvalid: 'Некорректный email',
+    passwordRequired: 'Введите пароль',
+    passwordMin: 'Минимум 8 символов',
+    passwordUppercase: 'Минимум одна заглавная буква',
+    passwordNumber: 'Минимум одна цифра',
+    confirmPasswordRequired: 'Подтвердите пароль',
+    passwordsMatch: 'Пароли не совпадают',
+  },
 };
