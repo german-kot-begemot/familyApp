@@ -15,6 +15,8 @@ export const ru = {
     joinTitle: 'Присоединяйтесь к Home Heroes',
     confirmPassword: 'Подтвердите пароль',
     name: 'Имя',
+    roleParent: 'Родитель',
+    roleKid: 'Ребенок',
   },
   errorMessages: {
     nameRequired: 'Введите имя',

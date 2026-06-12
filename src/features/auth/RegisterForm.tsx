@@ -5,6 +5,9 @@ import type { RegisterFormValues } from './formFieldsTypes';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { regSchema } from './shemas/reg.schema';
+import { useState } from 'react';
+import { registerUser } from '@/shared/api/api';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisterForm = () => {
   const { t } = useTranslation();
@@ -12,7 +15,7 @@ export const RegisterForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<RegisterFormValues>({
     defaultValues: {
       name: '',
@@ -23,9 +26,19 @@ export const RegisterForm = () => {
     mode: 'onBlur',
     resolver: zodResolver(regSchema),
   });
+  const [isButtonDisabled, setButtonDisabled] = useState<boolean>(false);
+  const navigate = useNavigate();
 
-  const onSubmit: SubmitHandler<RegisterFormValues> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<RegisterFormValues> = async (data) => {
+    setButtonDisabled(true);
+    try {
+      const registerResponse = await registerUser(data);
+      console.log(registerResponse);
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+      setButtonDisabled(false);
+    }
   };
 
   return (
@@ -47,6 +60,28 @@ export const RegisterForm = () => {
             {t(errors.name.message)}
           </p>
         )}
+      </div>
+
+      <div className="flex gap-4">
+        <label className="flex items-center gap-2 text-sm">
+          <Input
+            type="radio"
+            value="parent"
+            className="h-6"
+            {...register('role')}
+          />
+          <span>{t('auth.roleParent')}</span>
+        </label>
+
+        <label className="flex items-center gap-2 text-sm">
+          <Input
+            type="radio"
+            value="kid"
+            className="h-6"
+            {...register('role')}
+          />
+          <span>{t('auth.roleKid')}</span>
+        </label>
       </div>
 
       <div className="flex flex-col gap-1">
@@ -106,10 +141,22 @@ export const RegisterForm = () => {
         )}
       </div>
 
+      <div>
+        <label className="flex text-sm gap-2">
+          <Input
+            type="checkbox"
+            className="h-6 w-auto min-w-auto"
+            id="terms"
+            {...register('terms')}
+          />
+          {t('auth.terms')}
+        </label>
+      </div>
+
       <Button
         type="submit"
         className="mt-4 w-full py-2 font-medium"
-        disabled={isSubmitting}
+        disabled={isButtonDisabled}
       >
         {t('auth.createAccount')}
       </Button>

@@ -5,13 +5,16 @@ import { useForm, type SubmitHandler } from 'react-hook-form';
 import type { LoginFormValues } from './formFieldsTypes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loginSchema } from './shemas/login.schema';
+import { getAuthToken } from '@/shared/api/api';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
   const { t } = useTranslation();
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<LoginFormValues>({
     defaultValues: {
       email: '',
@@ -20,8 +23,19 @@ export const LoginForm = () => {
     mode: 'onBlur', // валидация при потере фокуса
     resolver: zodResolver(loginSchema), // использовать zod для валидации
   });
-  const onSubmit: SubmitHandler<LoginFormValues> = (data) => {
-    console.log(data);
+  const [isButtonDisabled, setButtonDisabled] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  const onSubmit: SubmitHandler<LoginFormValues> = async (data) => {
+    setButtonDisabled(true);
+    try {
+      const loginResponse = await getAuthToken(data);
+      console.log(loginResponse);
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+      setButtonDisabled(false);
+    }
   };
 
   return (
@@ -67,7 +81,7 @@ export const LoginForm = () => {
       <Button
         type="submit"
         className="mt-4 w-full py-2 font-medium"
-        disabled={isSubmitting}
+        disabled={isButtonDisabled}
       >
         {t('auth.logIn')}
       </Button>

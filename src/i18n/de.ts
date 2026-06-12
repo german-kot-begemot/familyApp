@@ -15,6 +15,8 @@ export const de = {
     joinTitle: 'Werde Teil von Home Heroes',
     confirmPassword: 'Passwort bestätigen',
     name: 'Name',
+    roleParent: 'Elternteil',
+    roleKid: 'Kind',
   },
   errorMessages: {
     nameRequired: 'Name ist erforderlich',

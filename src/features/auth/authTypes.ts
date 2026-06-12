@@ -5,7 +5,7 @@ export type LoginDto = {
 };
 
 // export type Role = 'kid' | 'parent';
-export type Role = 'kid' | 'parent' | 'guest';
+export type Role = 'kid' | 'parent';
 
 export interface User {
   id: number;
@@ -36,6 +36,7 @@ export interface TooManyRequests {
 //data transfer object for registration
 export type RegisterDto = {
   name: string;
+  role: Role;
   email: string;
   password: string;
   confirmPassword: string;
