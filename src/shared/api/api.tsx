@@ -75,3 +75,8 @@ export const registerUser = async (
 
   return mockRegisterResponse;
 };
+
+//todo: добавить функции для получения задач, заметок и событий по familyId
+// GET /tasks?familyId=123
+// GET /notes?familyId=123
+// GET /events?familyId=123

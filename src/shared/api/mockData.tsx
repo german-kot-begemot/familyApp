@@ -17,6 +17,10 @@ export const mockLoginResponse: LoginSuccessResponse = {
     name: 'John Doe',
     email: 'john.doe@example.com',
     role: 'parent',
+    family: {
+      id: 'family123',
+      code: 'FAMCODE',
+    },
   },
 };
 
@@ -33,6 +37,10 @@ export const mockRegisterResponse: RegisterSuccessResponse = {
     name: 'Jane Doe',
     email: 'jane.doe@example.com',
     role: 'parent',
+    family: {
+      id: 'family123',
+      code: 'FAMCODE',
+    },
   },
 };
 

@@ -12,6 +12,11 @@ export interface User {
   name: string;
   email: string;
   role: Role;
+
+  family: {
+    id: string;
+    code: string;
+  };
 }
 
 //Response types for login
@@ -40,6 +45,7 @@ export type RegisterDto = {
   email: string;
   password: string;
   confirmPassword: string;
+  familyCode?: string;
 };
 
 //Response type for registration

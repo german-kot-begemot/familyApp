@@ -9,6 +9,7 @@ export interface AuthSliceState {
   user: User | null;
   isAuth: boolean;
   token?: string;
+  familyId?: string | null;
   login: (data: LoginSuccessResponse) => void;
   logout: () => void;
   register: (data: RegisterSuccessResponse) => void;
@@ -18,12 +19,14 @@ export const createAuthSlice: StateCreator<AuthSliceState> = (set) => ({
   user: null,
   isAuth: false,
   token: undefined,
+  familyId: null,
 
   login: (userData) => {
     set({
       user: userData.user,
       isAuth: true,
       token: userData.token,
+      familyId: userData.user.family.id || null,
     });
   },
 
@@ -32,6 +35,7 @@ export const createAuthSlice: StateCreator<AuthSliceState> = (set) => ({
       user: null,
       isAuth: false,
       token: undefined,
+      familyId: null,
     }),
 
   register: (userData) => {
@@ -39,6 +43,7 @@ export const createAuthSlice: StateCreator<AuthSliceState> = (set) => ({
       user: userData.user,
       isAuth: true,
       token: userData.token,
+      familyId: userData.user.family.id || null,
     });
   },
 });
