@@ -1,26 +1,28 @@
-import { getAuthToken, registerUser } from '@/shared/api/api';
-import { LoginDto, RegisterDto, User } from './authTypes';
+import {
+  LoginSuccessResponse,
+  RegisterSuccessResponse,
+  User,
+} from './authTypes';
 import { StateCreator } from 'zustand';
 
 export interface AuthSliceState {
   user: User | null;
-  isAuthenticated: boolean;
+  isAuth: boolean;
   token?: string;
-  login: (data: LoginDto) => Promise<void>;
+  login: (data: LoginSuccessResponse) => void;
   logout: () => void;
-  register: (data: RegisterDto) => Promise<void>;
+  register: (data: RegisterSuccessResponse) => void;
 }
 
 export const createAuthSlice: StateCreator<AuthSliceState> = (set) => ({
   user: null,
-  isAuthenticated: false,
+  isAuth: false,
   token: undefined,
 
-  login: async (data) => {
-    const userData = await getAuthToken(data);
+  login: (userData) => {
     set({
       user: userData.user,
-      isAuthenticated: true,
+      isAuth: true,
       token: userData.token,
     });
   },
@@ -28,15 +30,14 @@ export const createAuthSlice: StateCreator<AuthSliceState> = (set) => ({
   logout: () =>
     set({
       user: null,
-      isAuthenticated: false,
+      isAuth: false,
       token: undefined,
     }),
 
-  register: async (data) => {
-    const userData = await registerUser(data);
+  register: (userData) => {
     set({
       user: userData.user,
-      isAuthenticated: true,
+      isAuth: true,
       token: userData.token,
     });
   },

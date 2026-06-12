@@ -6,8 +6,9 @@ import type { LoginFormValues } from './formFieldsTypes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loginSchema } from './shemas/login.schema';
 import { getAuthToken } from '@/shared/api/api';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './useAuth';
 
 export const LoginForm = () => {
   const { t } = useTranslation();
@@ -24,12 +25,21 @@ export const LoginForm = () => {
     resolver: zodResolver(loginSchema), // использовать zod для валидации
   });
   const [isButtonDisabled, setButtonDisabled] = useState<boolean>(false);
+  const { login, isAuth } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuth) {
+      console.log('User is already authenticated, redirecting to home page');
+      navigate('/');
+    }
+  }, [isAuth, navigate]);
 
   const onSubmit: SubmitHandler<LoginFormValues> = async (data) => {
     setButtonDisabled(true);
     try {
       const loginResponse = await getAuthToken(data);
+      login(loginResponse);
       console.log(loginResponse);
       navigate('/');
     } catch (error) {

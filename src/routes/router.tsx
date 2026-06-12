@@ -1,6 +1,6 @@
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { LoginPage } from '../pages/LoginPage/LoginPage';
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter } from 'react-router-dom';
 import { TasksPage } from '../pages/TasksPage/TasksPage';
 import { RewardsPage } from '../pages/RewardsPage/RewardsPage';
 import { ProfilePage } from '../pages/ProfilePage/ProfilePage';
@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: '/',
+        index: true,
         element: <DashboardPage />,
       },
       {
