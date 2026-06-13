@@ -4,13 +4,7 @@ export const languages = [
   { code: 'ru', label: 'RU' },
 ];
 
-export type AppTheme =
-  | 'light-new'
-  | 'dark'
-  | 'green'
-  | 'rabit'
-  | 'pandas'
-  | 'light';
+export type AppTheme = 'floral' | 'dark' | 'green' | 'cat' | 'panda' | 'light';
 
 export interface ThemeContextType {
   theme: AppTheme;

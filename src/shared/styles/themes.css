@@ -2,14 +2,17 @@
 [data-theme='dark'] {
   --app-bg-image: url('../../assets/images/flow.jpg');
   --app-bg-color: #fcfbe3;
-  --app-text-color: #f8fafc;
+  --app-text-color: #fcfbe3;
+  --app-shadow-color: #933026;
 }
 
 /* Зеленая тема */
 [data-theme='green'] {
   --app-bg-image: url('../../assets/images/green.jpeg');
   --app-bg-color: #fcfbe3;
-  --app-text-color: #14532d;
+  --app-text-color: #fcfbe3;
+  --foreground: #2e3919;
+  --app-shadow-color: #4a6f51;
 }
 
 /* Мультяшная тема */
@@ -17,13 +20,15 @@
   --app-bg-image: url('../../assets/images/siberian.png');
   --app-bg-color: #fcfbe3;
   --app-text-color: #7c2d12;
+  --app-shadow-color: #ea8282;
 }
 
 /* Светлая тема (по умолчанию) */
-[data-theme='light-new'] {
+[data-theme='floral'] {
   --app-bg-image: url('../../assets/images/light.jpg');
   --app-bg-color: #fcfbe3;
-  --app-text-color: #1e293b;
+  --app-text-color: #2e3919;
+  --app-shadow-color: #92a284;
 }
 
 /*Pandas*/
@@ -31,6 +36,14 @@
   --app-bg-image: url('../../assets/images/pandas.jpg');
   --app-bg-color: #fcfbe3;
   --app-text-color: #1e293b;
+  --app-shadow-color: #272f19;
+}
+
+[data-theme='light'] {
+  --app-bg-image: url('../../assets/images/');
+  --app-bg-color: #fcfbe3;
+  --app-text-color: #2e3919;
+  --app-shadow-color: #92a284;
 }
 
 body {

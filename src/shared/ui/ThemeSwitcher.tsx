@@ -10,7 +10,7 @@ import { Palette } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 const themes = [
-  { value: 'light-new', label: 'Light-Green' },
+  { value: 'floral', label: 'Floral' },
   { value: 'dark', label: 'Dark' },
   { value: 'green', label: 'Green' },
   { value: 'cat', label: 'Cat' },
