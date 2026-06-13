@@ -1,7 +1,8 @@
+// import { useBoundStore } from '@/store/store';
 import { Link } from 'react-router-dom';
 
 export const DashboardPage = () => {
-  console.log('DashboardPage rendered');
+  // const role = useBoundStore((state) => state.user?.role);
   return (
     <div>
       <h1>Dashboard</h1>
@@ -22,3 +23,11 @@ export const DashboardPage = () => {
     </div>
   );
 };
+
+// export const DashboardPage = () => {
+//   const role = useBoundStore((state) => state.user?.role);
+
+//   return role === 'parent'
+//     ? <ParentDashboard />
+//     : <ChildDashboard />;
+// };
