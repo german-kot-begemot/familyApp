@@ -1,0 +1,48 @@
+/* Темная тема */
+[data-theme='dark'] {
+  --app-bg-image: url('../../assets/images/flow.jpg');
+  --app-bg-color: #fcfbe3;
+  --app-text-color: #f8fafc;
+}
+
+/* Зеленая тема */
+[data-theme='green'] {
+  --app-bg-image: url('../../assets/images/green.jpeg');
+  --app-bg-color: #fcfbe3;
+  --app-text-color: #14532d;
+}
+
+/* Мультяшная тема */
+[data-theme='cat'] {
+  --app-bg-image: url('../../assets/images/siberian.png');
+  --app-bg-color: #fcfbe3;
+  --app-text-color: #7c2d12;
+}
+
+/* Светлая тема (по умолчанию) */
+[data-theme='light-new'] {
+  --app-bg-image: url('../../assets/images/light.jpg');
+  --app-bg-color: #fcfbe3;
+  --app-text-color: #1e293b;
+}
+
+/*Pandas*/
+[data-theme='panda'] {
+  --app-bg-image: url('../../assets/images/pandas.jpg');
+  --app-bg-color: #fcfbe3;
+  --app-text-color: #1e293b;
+}
+
+body {
+  background-image: var(--app-bg-image);
+  background-color: var(--app-bg-color);
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--app-text-color);
+  transition:
+    background-image 0.4s ease,
+    background-color 0.4s ease,
+    color 0.4s ease;
+}

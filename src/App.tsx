@@ -1,12 +1,25 @@
 import './App.css';
 import { RouterProvider } from 'react-router';
 import { router } from './routes/router';
+import { ThemeProvider } from './app/providers/ThemeProvider';
+
+// const App: React.FC = () => {
+//   return (
+//     <ThemeProvider>
+//       <AuthProvider>
+//         <RouterProvider router={router} />
+//       </AuthProvider>
+//     </ThemeProvider>
+//   );
+// };
+
+// export default App;
 
 const App: React.FC = () => {
   return (
-    <div data-testid="app" className="App">
+    <ThemeProvider>
       <RouterProvider router={router} />
-    </div>
+    </ThemeProvider>
   );
 };
 

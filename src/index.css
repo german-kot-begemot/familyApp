@@ -36,6 +36,12 @@
   font-weight: 700;
 }
 
+@layer base {
+  body {
+    background-color: transparent;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, sans-serif;
   font-synthesis: none;
@@ -57,9 +63,7 @@ body,
   min-height: 100vh;
   font-family: 'Nunito', sans-serif;
   line-height: 1.5;
-  background-color: #fcfbe3;
   color: #44ccaa;
-  /* color: #2e2e2e; */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -118,7 +122,4 @@ input:focus::placeholder {
   p {
     font-size: 24px;
   }
-  /* .palette-btn {
-    height: 24px;
-  } */
 }

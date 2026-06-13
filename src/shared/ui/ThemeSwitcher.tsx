@@ -1,20 +1,48 @@
-import { useState } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import '../styles/dropDown.css';
+
 import { Palette } from 'lucide-react';
+import { useTheme } from 'next-themes';
+
+const themes = [
+  { value: 'light-new', label: 'Light-Green' },
+  { value: 'dark', label: 'Dark' },
+  { value: 'green', label: 'Green' },
+  { value: 'cat', label: 'Cat' },
+  { value: 'panda', label: 'Panda' },
+  { value: 'light', label: 'Light' },
+] as const;
 
 export const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
+  const { setTheme } = useTheme();
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="flex items-center gap-2 max-h-fit rounded-lg p-2 transition-colors hover:bg-accent"
-    >
-      <Palette size={16} className="palette-btn" />
-    </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-accent outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0">
+          <Palette size={16} />
+        </button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent
+        align="end"
+        className="w-full translate-y-1 transition-all duration-[2s]"
+      >
+        {themes.map((t) => (
+          <DropdownMenuItem
+            key={t.value}
+            onClick={() => setTheme(t.value)}
+            className="cursor-pointer w-full transition-colors duration-300 ease-in-out hover:bg-[#44CCAA]/10"
+          >
+            {t.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
