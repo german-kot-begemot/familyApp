@@ -8,9 +8,6 @@ type ProtectedProps = {
 
 export const ProtectedRoute = ({ children }: ProtectedProps) => {
   const isAuth = useBoundStore((state) => state.isAuth);
-  console.log('isAuth', isAuth);
-
-  // useBoundStore.persist.hasHydrated();
 
   return isAuth ? <>{children}</> : <Navigate to="/login" replace />;
 };

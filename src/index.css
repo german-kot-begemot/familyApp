@@ -30,6 +30,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'ZnikomitNo25';
+  src: url('./assets/fonts/ZnikomitNo25.otf') format('opentype');
+  font-weight: 700;
+}
+
 :root {
   font-family: Inter, system-ui, sans-serif;
   font-synthesis: none;
@@ -98,4 +104,21 @@ input:focus::placeholder {
 }
 .font-goosberry {
   font-family: 'Goosberry', sans-serif;
+}
+.font-znikomit {
+  font-family: 'ZnikomitNo25', sans-serif;
+}
+
+@media (width: 1680px) {
+  html {
+    font-size: 24px;
+  }
+  h1,
+  h2,
+  p {
+    font-size: 24px;
+  }
+  /* .palette-btn {
+    height: 24px;
+  } */
 }
