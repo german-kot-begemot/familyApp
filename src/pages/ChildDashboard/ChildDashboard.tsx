@@ -20,3 +20,8 @@ export const ChildDashboard = () => {
 // CoinsCounter	баланс
 // ShopPreview	магазин
 // ProfileCard	профиль
+
+// child может:
+// брать задачи
+// отправлять на проверку
+// тратить баллы

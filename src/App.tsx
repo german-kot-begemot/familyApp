@@ -24,3 +24,12 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+//todo: добавить авторизацию и обернуть в провайдер AuthProvider и QueryClientProvider для react-query, если будет использоваться
+// <QueryClientProvider client={queryClient}>
+//   <ThemeProvider>
+//     <AuthProvider>
+//       <RouterProvider router={router} />
+//     </AuthProvider>
+//   </ThemeProvider>
+// </QueryClientProvider>

@@ -31,3 +31,8 @@ export const ParentDashboard = () => {
 //   profile/
 //   shop/
 //   stats/
+
+// parent может:
+// создавать задачи
+// подтверждать выполнение
+// создавать rewards
