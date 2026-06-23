@@ -3,10 +3,13 @@ import { TaskCard } from './TaskCard';
 import { useEffect, useState } from 'react';
 import { getTasksByFamilyId } from '@/shared/api/api';
 import { Button } from '@/components/ui/button';
+import { Task } from './tasksTypes';
+import { Modal } from '@/shared/ui/Modal';
 
 export const TasksPage = () => {
   const tasks = useBoundStore((s) => s.tasks);
   const setTasks = useBoundStore((s) => s.setTasks);
+  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const userRole = useBoundStore((state) => state.user?.role);
   // const familyId  = useBoundStore((s) => s.familyId) //TODO: [BACKEND-READY] Получать familyId из глобального состояния после реализации аутентификации и получения данных о семье при входе в приложение. Пока что используем заглушку.
   const familyId = 'family123';
@@ -35,7 +38,7 @@ export const TasksPage = () => {
     <>
       <div className="task-container flex flex-row flex-wrap gap-4">
         {tasks.map((task) => (
-          <TaskCard key={task.id} task={task} />
+          <TaskCard key={task.id} task={task} onClick={setSelectedTask} />
         ))}
       </div>
       {userRole === 'parent' && (
@@ -43,6 +46,14 @@ export const TasksPage = () => {
           <Button onClick={() => console.log('Клик!')}>Add new Task</Button>
         </div>
       )}
+      <Modal open={selectedTask !== null} onClose={() => setSelectedTask(null)}>
+        {selectedTask && (
+          <div>
+            <h2>{selectedTask.title}</h2>
+            <p>{selectedTask.description}</p>
+          </div>
+        )}
+      </Modal>
     </>
   );
 };
