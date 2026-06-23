@@ -2,6 +2,7 @@
 
 // import axios, { isAxiosError } from 'axios';
 // import { API_URL_LOGIN } from './apiConfig';
+import { Tasks } from '@/pages/TasksPage/tasksTypes';
 import {
   LoginDto,
   //   LoginErrorResponse,
@@ -11,7 +12,8 @@ import {
   RegisterSuccessResponse,
 } from '../../features/auth/authTypes';
 // import { API_URL_REGISTER } from './apiConfig';
-import { mockLoginResponse, mockRegisterResponse } from './mockData';
+import { mockLoginResponse, mockRegisterResponse, mockTasks } from './mockData';
+// import { API_URL_TASKS } from './apiConfig';
 
 // export const getAuthToken = async (
 //   data: LoginDto,
@@ -80,3 +82,28 @@ export const registerUser = async (
 // GET /tasks?familyId=123
 // GET /notes?familyId=123
 // GET /events?familyId=123
+
+// export const getTasksByFamilyId = async (familyId: string):Promise<Tasks> => {
+//    try {
+//   const response = await axios.get<Tasks>(
+//     `${API_URL_TASKS}?familyId=${familyId}`,
+//     {
+//       headers: { 'x-token': token },
+//     },
+//   );
+//   return response.data;
+// } catch (error) {
+//   // Обработка ошибок
+//   throw new Error('Failed to fetch tasks');
+// }
+// };
+// request mockTasks from mockData.tsx
+
+export const getTasksByFamilyId = async (familyId: string): Promise<Tasks> => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  if (familyId === 'error') {
+    throw new Error('Failed to fetch tasks');
+  }
+  return { tasks: mockTasks as Tasks['tasks'] };
+};

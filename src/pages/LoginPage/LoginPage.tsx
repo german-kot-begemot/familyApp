@@ -27,7 +27,9 @@ export const LoginPage = () => {
           {t('auth.appName')}
         </h1>
         <LoginForm />
-        <h2 className="text-[#4ca] pt-5 pb-2 text-start">{t('auth.noPage')}</h2>
+        <h2 className="text-[#5E8970] pt-5 pb-2 text-start">
+          {t('auth.noPage')}
+        </h2>
         <Button
           type="button"
           onClick={handlecreateAcc}

@@ -11,10 +11,10 @@ export const RegisterPage = () => {
         <h1 className=" text-5xl text-center pb-8 font-goosberry">
           {t('auth.joinTitle')}
         </h1>
-        <h2 className="text-[#4ca] pb-5">{t('auth.regTitle')}</h2>
+        <h2 className="text-[#5E8970] pb-5">{t('auth.regTitle')}</h2>
         <RegisterForm />
 
-        <p className="text-[#4ca] pt-5 pb-2 text-start text-[10px]">
+        <p className="text-[#5E8970] pt-5 pb-2 text-start text-[10px]">
           {t('auth.terms')}
         </p>
         <p className="pt-5 text-center">

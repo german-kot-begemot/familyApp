@@ -5,10 +5,10 @@ export type LoginDto = {
 };
 
 // export type Role = 'kid' | 'parent';
-export type Role = 'kid' | 'parent';
+export type Role = 'kid' | 'parent' | undefined;
 
 export interface User {
-  id: number;
+  id: string;
   name: string;
   email: string;
   role: Role;

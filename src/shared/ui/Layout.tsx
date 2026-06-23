@@ -7,7 +7,7 @@ export const Layout = () => {
     <div className="flex flex-col h-screen overflow-hidden">
       <Header />
       <main className="flex flex-1 overflow-hidden">
-        <div className="w-1/4 h-full border-r bg-background/40 shadow-[10px_10px_60px_var(--app-shadow-color)] z-50 border-none">
+        <div className="max-w-1/4 h-full border-r bg-background/40">
           <Sidebar />
         </div>
 
@@ -18,14 +18,3 @@ export const Layout = () => {
     </div>
   );
 };
-
-// return (
-//   <div>
-//     <Header />
-//     <Sidebar />
-
-//     <main>
-//       <Outlet />
-//     </main>
-//   </div>
-// );
