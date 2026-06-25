@@ -15,13 +15,13 @@ export interface ThemeContextType {
 export const parentMenu = [
   { label: 'Dashboard', path: '/parents' },
   { label: 'Tasks', path: '/parents/tasks' },
-  { label: 'Store', path: '/parents/store' },
+  { label: 'Rewards', path: '/parents/rewards' },
   { label: 'Kids', path: '/parents/kids' },
 ];
 //kid menu
 export const kidMenu = [
   { label: 'Dashboard', path: '/kids' },
   { label: 'Tasks', path: '/kids/tasks' },
-  { label: 'Store', path: '/kids/store' },
+  { label: 'Rewards', path: '/kids/rewards' },
   { label: 'Wallet', path: '/kids/wallet' },
 ];

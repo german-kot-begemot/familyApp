@@ -14,6 +14,7 @@ import {
 // import { API_URL_REGISTER } from './apiConfig';
 import { mockLoginResponse, mockRegisterResponse, mockTasks } from './mockData';
 // import { API_URL_TASKS } from './apiConfig';
+// import { API_URL_TASKS } from './apiConfig';
 
 // export const getAuthToken = async (
 //   data: LoginDto,
@@ -107,3 +108,33 @@ export const getTasksByFamilyId = async (familyId: string): Promise<Tasks> => {
   }
   return { tasks: mockTasks as Tasks['tasks'] };
 };
+
+//CRUD func for Tasks
+//Add a new task
+// export const createTask = async (task: Task, familyId: string): Promise<Task> => {
+//   try {
+//     const response =  await axios.post<Task>(`${API_URL_TASKS}?familyId=${familyId}`, task);
+//     return response.data;
+//   } catch (error) {
+//     throw new Error('Failed to create task');
+//   }
+// };
+
+//Delete a task
+// export const deleteTask = async (taskId: string): Promise<void> => {
+//   try {
+//     await axios.delete(`${API_URL_TASKS}/${taskId}`);
+//   } catch (error) {
+//     throw new Error('Failed to delete task');
+//   }
+// };
+
+//Update a task
+// export const updateTask = async (task: Task): Promise<Task> => {
+//   try {
+//     const response = await axios.put<Task>(`${API_URL_TASKS}/${task.id}`, task);
+//     return response.data;
+//   } catch (error) {
+//     throw new Error('Failed to update task');
+//   }
+// };

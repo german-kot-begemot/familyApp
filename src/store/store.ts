@@ -3,12 +3,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { StoreState } from './typesStore';
 import { createTasksSlice } from '@/pages/TasksPage/TasksSliceStore';
+import { createRewardsSlice } from '@/pages/RewardsPage/RewardsSliceStore';
 
 export const useBoundStore = create<StoreState>()(
   persist(
     (...a) => ({
       ...createAuthSlice(...a),
       ...createTasksSlice(...a),
+      ...createRewardsSlice(...a),
     }),
     {
       name: 'auth-storage',
