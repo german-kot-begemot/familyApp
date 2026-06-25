@@ -4,6 +4,8 @@
   --app-bg-color: #fcfbe3;
   --app-text-color: #fcfbe3;
   --app-shadow-color: #933026;
+  --card-bg-color: #8a4c46;
+
 }
 
 /* Зеленая тема */
@@ -13,6 +15,7 @@
   --app-text-color: #fcfbe3;
   --foreground: #2e3919;
   --app-shadow-color: #4a6f51;
+  --card-bg-color: #4a6f51;
 }
 
 /* Мультяшная тема */
@@ -21,6 +24,7 @@
   --app-bg-color: #fcfbe3;
   --app-text-color: #7c2d12;
   --app-shadow-color: #ea8282;
+  --card-bg-color: #d68989;
 }
 
 /* Светлая тема (по умолчанию) */
@@ -29,6 +33,7 @@
   --app-bg-color: #fcfbe3;
   --app-text-color: #2e3919;
   --app-shadow-color: #92a284;
+  --card-bg-color: #4a6f51;
 }
 
 /*Pandas*/
@@ -37,6 +42,7 @@
   --app-bg-color: #fcfbe3;
   --app-text-color: #1e293b;
   --app-shadow-color: #272f19;
+  --card-bg-color: #4a6f51;
 }
 
 [data-theme='light'] {
@@ -44,6 +50,7 @@
   --app-bg-color: #fcfbe3;
   --app-text-color: #2e3919;
   --app-shadow-color: #92a284;
+  --card-bg-color: #4a6f51;
 }
 
 body {

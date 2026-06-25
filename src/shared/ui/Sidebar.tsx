@@ -1,6 +1,7 @@
 import { useBoundStore } from '@/store/store';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { kidMenu, parentMenu } from '../types/appTypes';
+import { Button } from '@/components/ui/button';
 
 export const Sidebar = () => {
   const user = useBoundStore((s) => s.user);
@@ -15,20 +16,21 @@ export const Sidebar = () => {
         {menu.map((item) => {
           const isActive = location.pathname === item.path;
           return (
-            <button
+            <Button
               key={item.path}
               onClick={() => navigate(item.path)}
-              className={`flex items-center gap-2 text-sm font-medium p-2.5 w-full rounded-xl transition-colors text-left ${
-                isActive
-                  ? 'bg-accent text-accent-foreground'
-                  : 'bg-transparent hover:bg-muted'
-              }`}
+              className={`flex items-center gap-2 text-sm font-medium p-2.5 w-full rounded-md text-left
+    border border-transparent transition-all duration-200 ease-out
+    hover:-translate-y-px hover:border-muted-foreground/20 active:translate-y-0 active:scale-[0.99]
+    ${isActive ? 'bg-(--card-bg-color) brightness-90 text-accent-foreground border-black/10' : 'bg-(--card-bg-color) hover:bg-muted'}
+  `}
             >
               {item.label}
-            </button>
+            </Button>
           );
         })}
       </nav>
     </aside>
   );
 };
+// --btn - bg - color;

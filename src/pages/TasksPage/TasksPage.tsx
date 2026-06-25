@@ -43,7 +43,13 @@ export const TasksPage = () => {
       </div>
       {userRole === 'parent' && (
         <div className="btn-holder p-4 flex justify-end">
-          <Button onClick={() => console.log('Клик!')}>Add new Task</Button>
+          <Button
+            onClick={() => console.log('Клик!')}
+            className="border border-transparent transition-all duration-200 ease-out
+    hover:-translate-y-px hover:border-muted-foreground/20 active:translate-y-0 active:scale-[0.99]"
+          >
+            Add new Task
+          </Button>
         </div>
       )}
       <Modal open={selectedTask !== null} onClose={() => setSelectedTask(null)}>

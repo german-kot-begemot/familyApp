@@ -22,7 +22,7 @@ export const TaskCard = ({ task, onClick }: TaskCardProps) => {
     <>
       <div
         ref={cardRef}
-        className="card text-sm max-w-40 h-auto bg-[#4a6f51] rounded-md 
+        className="card text-sm max-w-40 h-auto bg-(--card-bg-color) rounded-md 
         transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02]  
         hover:shadow-xl active:scale-[0.98]"
         onMouseMove={handleMouseMove}
