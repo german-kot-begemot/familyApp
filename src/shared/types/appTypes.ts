@@ -17,6 +17,7 @@ export const parentMenu = [
   { label: 'Tasks', path: '/parents/tasks' },
   { label: 'Rewards', path: '/parents/rewards' },
   { label: 'Kids', path: '/parents/kids' },
+  { label: 'Approvals', path: '/parents/approvals' },
 ];
 //kid menu
 export const kidMenu = [

@@ -7,3 +7,7 @@ export const API_URL_REGISTER = `${API_BASE_URL}/register`;
 export const API_URL_TASKS = `${API_BASE_URL}/tasks`;
 
 export const API_URL_REWARDS = `${API_BASE_URL}/rewards`;
+
+export const API_URL_APPROVALS = `${API_BASE_URL}/approvals`;
+
+export const API_URL_KIDS = `${API_BASE_URL}/kids`;

@@ -4,6 +4,7 @@ import { persist } from 'zustand/middleware';
 import { StoreState } from './typesStore';
 import { createTasksSlice } from '@/pages/TasksPage/TasksSliceStore';
 import { createRewardsSlice } from '@/pages/RewardsPage/RewardsSliceStore';
+import { createKidsSlice } from '@/features/kids/KidsSliceStore';
 
 export const useBoundStore = create<StoreState>()(
   persist(
@@ -11,6 +12,7 @@ export const useBoundStore = create<StoreState>()(
       ...createAuthSlice(...a),
       ...createTasksSlice(...a),
       ...createRewardsSlice(...a),
+      ...createKidsSlice(...a),
     }),
     {
       name: 'auth-storage',

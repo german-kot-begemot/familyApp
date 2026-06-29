@@ -1,7 +1,7 @@
 import { useBoundStore } from '@/store/store';
 import { RewardCard } from './RewardCard';
 import { useEffect, useState } from 'react';
-import { getRewarsByFamilyId } from '@/shared/api/rewardsApi';
+import { getRewarsByFamilyId } from '@/pages/RewardsPage/rewardsApi';
 import { Button } from '@/components/ui/button';
 import { Modal } from '@/shared/ui/Modal';
 import { Reward } from './rewardsTypes';

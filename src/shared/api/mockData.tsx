@@ -133,3 +133,34 @@ export const mockRewards: Reward[] = [
     points: 60,
   },
 ];
+
+export const mockKids = [
+  {
+    id: 'kid1',
+    familyId: 'family123',
+    name: 'Veronika',
+    age: 10,
+    avatarUrl:
+      'https://images.unsplash.com/photo-1523475472560-d2df97ec485c?w=400',
+    coins: 120,
+    level: 3,
+    completedTasks: 15,
+    pendingTasks: 2,
+    streak: 5,
+    theme: 'floral',
+  },
+  {
+    id: 'kid2',
+    familyId: 'family123',
+    name: 'Misha',
+    age: 8,
+    avatarUrl:
+      'https://images.unsplash.com/photo-1523475472560-d2df97ec485c?w=400',
+    coins: 80,
+    level: 2,
+    completedTasks: 10,
+    pendingTasks: 3,
+    streak: 3,
+    theme: 'dark',
+  },
+];

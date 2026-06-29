@@ -3,5 +3,6 @@ export const routesPath = {
   dashboard: '/',
   tasks: '/tasks',
   rewards: '/rewards',
+  approvals: '/approvals',
   profile: '/profile',
 };

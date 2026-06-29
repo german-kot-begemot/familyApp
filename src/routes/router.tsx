@@ -9,6 +9,8 @@ import { RegisterPage } from '@/pages/LoginPage/RegisterPage';
 import { ParentDashboard } from '@/pages/ParentDashboard/ParentDashboard';
 import { ChildDashboard } from '@/pages/ChildDashboard/ChildDashboard';
 import { RewardsPage } from '@/pages/RewardsPage/RewardsPage';
+import { ApprovalsPage } from '@/pages/ApprovalsPage/ApprovalsPage';
+import { KidsPage } from '@/pages/KidsPage/KidsPage';
 
 export const router = createBrowserRouter([
   //public routes
@@ -48,6 +50,14 @@ export const router = createBrowserRouter([
           {
             path: 'rewards',
             element: <RewardsPage />,
+          },
+          {
+            path: 'approvals',
+            element: <ApprovalsPage />,
+          },
+          {
+            path: 'kids',
+            element: <KidsPage />,
           },
         ],
       },

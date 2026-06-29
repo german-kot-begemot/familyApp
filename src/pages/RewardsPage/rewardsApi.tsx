@@ -1,7 +1,7 @@
 import { Rewards } from '@/pages/RewardsPage/rewardsTypes';
 // import axios, { isAxiosError } from 'axios';
 // import { API_URL_REWARDS } from './apiConfig';
-import { mockRewards } from './mockData';
+import { mockRewards } from '../../shared/api/mockData';
 
 // export const getRewarsByFamilyId = async (
 //   familyId: string,
